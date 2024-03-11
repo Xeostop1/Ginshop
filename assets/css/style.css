@@ -1,0 +1,435 @@
+/*지정 속성값*/
+:root{
+    --border_r:1px solid red;
+    --border_b:1px solid blue;
+    --d_color:#81D8D0;
+    --d_border:1px solid #c2c2c2;
+}
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css); 
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+a, li, p{
+    text-decoration: none;
+    list-style: none;
+    color: #545454;
+}
+
+#wrap{
+    width: 499px;
+    height: 1080px;
+    /* border: var(--d_border); */
+    margin: auto;
+    position: relative;
+}
+
+/* 헤더 */
+#header{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+}
+
+#header .menubar, .shopname , .default_hearder {
+    height: 25px;
+    padding-top: 18px;
+    
+}
+#header .menubar {
+    height: 25px;
+    margin-right: 122px;
+    padding-left: 20px;
+    
+}
+#header .menubar a img{
+    width: 25px;
+    height: 25px;
+    
+}
+#header .shopname{
+    /* margin-right: auto;
+    margin-left: auto; */
+    text-align: center;
+    font-size: 17px;
+    width: 143px;
+    height: 16px;
+    margin-right: 98px;
+}
+#header .default_hearder{
+    margin-left: auto;
+    
+}
+
+#header .default_hearder a:first-child img{
+    width: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: var(--border_r);
+}
+#header .default_hearder a:last-child {
+    width: 25px;
+    width: 25px;
+    margin-right: 22px;
+    margin-left: 8px;
+}
+
+/* 프로필 배경 */
+.shop_bg{
+    z-index: 1;
+    width: 100%;
+    height: 612px;
+    background-color: var(--d_color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    /* border: var(--border_r); */
+}
+
+/*=========삭제========  */
+.shop_bg:after {
+    content: '';
+    display: block;
+    height: 1px; 
+    width: 100%;  
+    /* background:red; */
+    position: absolute;
+    top: 550px;  
+}
+
+
+/* sns 공유하기 */
+.shop_bg .sns_share {
+    position: absolute;  
+    right: 0;  
+    bottom: 0;  
+    display: flex;
+    padding-bottom: 50px;
+}
+.sns_share .insta{
+    margin-right: 5px;
+}
+
+
+/* 보드 프로필 */
+/* 프로필 위에 올라가야 함 */
+.main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    width: 500px;
+    height: 1264;
+    z-index: 2;
+    margin-top: -25px;
+    position: relative;
+    background-color: var(--d_color);
+    box-shadow: 0px -8px 10px rgba(0, 0, 0, 0.2);
+
+}
+.main .profile_warp{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+.main .profile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -64px;
+}
+
+/* 마이링 BGIMG*/
+.main .profile .myring {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 124px;
+    height: 124px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: -3px;
+    z-index: 3;
+    margin-top: 3px;
+}
+/* 그림자 */
+.myring::after {
+    content: "";
+    position: absolute;
+    top: 0px; /* 그림자의 위치와 크기 조정 */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 -3px 7px rgba(0, 0, 0, 0.2); /* 그림자 색상과 퍼짐 조정 */
+    z-index: -1;
+}
+
+
+
+.main .profile .myring .profile_img {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 3px;
+    right: 5px;
+}
+
+
+
+.main .profile .myring .myring_display{
+    width: 109px;
+    height: 109px;
+    border-radius: 50%;
+    background-color: #c2c2c2;
+    z-index: 3;
+    /* position: absolute;
+    display: flex;
+    /* justify-content: center;
+    align-items: center;     
+    top:3px;
+    right: 3px;  */
+}
+
+.main .profile .myring .myring_counter{
+    width: 103px; 
+    height: 103px; 
+    border: 3px solid red;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+
+
+
+.main .profile .myring .profile_img{
+    background: repeating-linear-gradient(
+    45deg,
+    #f3f3f3,
+    #f3f3f3 2px,
+    #c0c0c0 1px,
+    #c0c0c0 3px
+  );
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    z-index: 4;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 14px;
+    right: 14px;  
+}
+
+
+
+/* 프로필 이름 */
+.main .myshop_propfile{
+
+}
+
+.main .myshop_propfile p{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.main .myshop_propfile p:last-child{
+    margin-bottom: 10px;
+    
+}
+
+/* 보드 위젯 */
+.main .widget{
+
+    
+} 
+/* 위젯 아이콘 컨테이너 스타일 */
+.main .widget .widget_icon {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    width: 100%; 
+    padding-left: 95px; /* 첫 번째 아이콘과 컨테이너 시작 부분의 거리 */
+    padding-right: 95px; /* 마지막 아이콘과 컨테이너 끝 부분의 거리 */
+}
+
+
+/* 각 아이콘 스타일 */
+.main .widget .widget_icon a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.main .widget .widget_icon a:not(:first-child) {
+    margin-left: 90px; /* 아이콘 간격 */
+}
+
+/* 좋아요 아이콘 스타일 */
+.main .widget .widget_icon a {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* 왜 안돼요?????? */
+.main .widget .widget_icon a .like_w {
+    background: url("../images/icon_mainLikes.svg") no-repeat center, red;
+    background-size: contain; /* This will only affect the image, not the color */
+    width: 45px;
+    height: 45px;  
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* 마이링 & 별 아이콘 스타일 */
+.main .widget .widget_icon a .myring_w{
+    background-image: url('../images/icon_mainMyring.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 45px;
+    height: 45px;
+}
+.main .widget .widget_icon a .stars {
+    background-image: url('../images/icon_mainReview.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 45px;
+    height: 45px;
+}
+
+/* 위젯 카운터 스타일 */
+.main .widget .widget_counter {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    padding-left: 95px;
+}
+
+
+.main .widget .widget_counter p {
+    font-size: 14px;
+    color: #333;
+}
+.main .widget .widget_counter p:not(:first-child) {
+    margin-left:112px; 
+}
+
+
+/* 보드 아이템 */
+/* 최상위 .board 클래스에 대한 스타일 */
+.board {
+    display: flex;
+    align-self: flex-start;
+    margin-top: 50px; 
+    margin-left: 53px;
+
+}
+.board .board_items{
+    padding-left: 0px;
+}
+
+
+/* 각 .board_item에 대한 스타일 */
+.board .board_item {
+    margin-bottom: 50px; /* 다음 .board_item과의 간격 */
+}
+
+/* .board_info 내의 요소들 간격 조정 */
+.board .board_item .board_info a .board_name + a,
+.board .board_item .board_info a .board_like {
+    margin-right: 10px; /* 'board_name'과 'like' 아이콘 사이 간격 */
+}
+
+.board .board_item .board_info a .board_like + .board_like_c {
+    margin-right: 2px; /* 'like' 아이콘과 숫자 사이 간격 */
+}
+
+/* 보드 설명 */
+.board .board_item .board_des{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.board_des > a:nth-child(4){
+    margin-left: auto; 
+    display: flex;
+    align-items: center; 
+    padding-left: 115px;
+}
+.board_des > a:nth-child(4) > span:nth-child(1){
+    /*구글심볼은 폰트사이즈로 조정! */
+    font-size: 30px;
+    align-self: flex-end;
+    margin-bottom: -9px; 
+}
+
+
+.board_main{}
+.board_main .thumbnail{
+       
+
+}
+.board_main .thumbnail a{}
+.board_main .thumbnail a img{
+    width: 393px; 
+    height: 393px; 
+}
+
+
+
+
+
+.footer{}
+.footer a{}
+
+/* ======================================================== */
+/* ======================================================== */
+.myshop_propfile p {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+/* 보드 이름과 좋아요 스타일 */
+
+
+/* ======삭제====== */
+/* .footer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    background: #f1f1f1;
+}
+
+.footer a {
+    color: #333;
+    font-size: 24px;
+    text-decoration: none;
+} */
+
+
