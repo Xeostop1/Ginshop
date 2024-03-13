@@ -1,0 +1,210 @@
+/*지정 속성값*/
+:root {
+  --border_r: 1px solid red;
+  --border_b: 1px solid blue;
+  --d_color: #81d8d0;
+  --bg_color: #e5e5e5;
+  --d_black: black;
+  --d_border: 1px solid #c2c2c2;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+a,
+li,
+p {
+  text-decoration: none;
+  list-style: none;
+  color: #545454;
+}
+.sidebar_warp {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#sidebar {
+  width: 499px;
+  height: auto;
+  margin-left: 919px;
+  margin-right: 531px;
+}
+
+/* 프로필 배경화면  */
+.menu-profile {
+  width: 499px;
+  height: 269px;
+}
+
+.offcanvas-header {
+  height: 77px;
+  position: relative; /* 자식 요소들을 상대적으로 배치*/
+  display: flex; /*가로로 정렬 */
+  justify-content: flex-end; /* 오른쪽 정렬 */
+  padding-right: 41px; /* 오른쪽 패딩 */
+}
+
+.offcanvas-header .btn-close {
+  position: absolute;
+  left: 0px;
+  width: 24px;
+  height: 21px;
+}
+.menu-btn {
+  cursor: pointer;
+}
+
+.offcanvas-header a {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.offcanvas-header a:first-child {
+  margin-right: auto; /* 첫 번째 아이콘을 제외하고 나머지는 오른쪽 배치*/
+}
+
+.offcanvas-header .material-symbols-outlined {
+  font-size: 25px;
+  width: 25px;
+  height: 25px;
+}
+
+/* 프로필배경, 검색 샵이름 */
+.menu_bg {
+  background-color: var(--d_color);
+}
+
+.menu-warp {
+  margin-left: 25px;
+}
+
+/* 샵 이름 알람 */
+.offcanvas-body .shop-info {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 26px;
+}
+.offcanvas-body .shop-info a {
+}
+.offcanvas-body .shop-info a h2 {
+  font-size: 18px;
+  margin-right: 7px;
+  font-weight: bold;
+}
+.offcanvas-body .shop-info a span {
+}
+
+/* 실시간 공지사항 */
+.offcanvas-body .notice-title {
+  margin-top: -6px;
+  margin-bottom: 9px;
+}
+.offcanvas-body .notice-title a {
+}
+.offcanvas-body .notice-title a span {
+  font-size: 12px;
+}
+
+/* 검색창 */
+.offcanvas-body .search {
+  position: relative;
+  display: inline-block;
+}
+.offcanvas-body .search .search-form {
+  width: 304px;
+  height: 32px;
+  border-radius: 25px;
+}
+.offcanvas-body .search a span {
+  font-size: 25px;
+  position: absolute; /* 아이콘을 절대 위치 인풋 위에 위치 */
+  right: 9px; /* 오른쪽에서 3px 떨어진 곳에 위치 */
+  top: 48%; /* 상위 요소 대비 상단으로부터 50% 위치 */
+  transform: translateY(-50%); /* Y축 기준으로 -50% 만큼 이동하여 중앙 정렬 */
+  pointer-events: none;
+}
+/* 보드 전체보기 */
+.board-list {
+}
+.board-list .board-title {
+  height: 30px;
+  background-color: var(--d_black);
+  color: white;
+  line-height: 30px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+.board-list .board-items {
+  background-color: var(--bg_color);
+}
+
+.board-list .board-items ul {
+  display: flex;
+  flex-wrap: wrap; /* 아이템들이 가로로 꽉 차면 다음 줄로 */
+  list-style: none; /* 기본 리스트 스타일 제거 */
+  padding-top: 23px;
+}
+.board-list .board-items ul li {
+  width: calc(50% - 27.5px);
+  margin-bottom: 19px;
+  margin-right: 17px;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+}
+.board-list .board-items ul li:nth-child(odd) {
+  margin-left: 5px;
+}
+.board-list .board-items ul li:nth-child(even) {
+  margin-right: 3px;
+}
+/* 개별보드 아이템 */
+.board-list .board-items ul li .item {
+  margin-right: 20px;
+  width: 206px;
+  height: 225px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.board-list .board-items ul li .item .item-thumbnail {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--d_color);
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+}
+.board-list .board-items ul li .item .item-thumbnail > img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  /* background-repeat: no-repeat;
+    background-size: cover; */
+}
+.board-list .board-items ul li .item .item-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 17px;
+}
+.board-list .board-items ul li .item .item-hashtag {
+  margin-left: 12px;
+  font-size: 12.5px;
+}
+.board-list .board-items ul li .item .item-des {
+}
+/* 스크롤숨기기 크롬, 사파리, 오페라, 엣지, 파폭*/
+.board-items::-webkit-scrollbar {
+  display: none;
+}
+.board-items {
+  -ms-overflow-style: none;
+}
+.board-items {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
